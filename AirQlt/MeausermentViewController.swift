@@ -13,8 +13,8 @@ class MesauermentViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
         self.navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName:UIColor.white]
+        // Do any additional setup after loading the view, typically from a nib.
     }
     
     override func didReceiveMemoryWarning() {
@@ -22,6 +22,13 @@ class MesauermentViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
+    @IBAction func showLeftMenu(_ sender: UIBarButtonItem) {
+        if let rootViewController = UIApplication.shared.keyWindow?.rootViewController as? ResideMenuViewController {
+            rootViewController.presentLeftMenuViewController()
+        }
+    }
 
+    @IBAction func showCities(_ sender: UIBarButtonItem) {
+    }
 }
 

@@ -155,9 +155,15 @@
                     <navigationItem key="navigationItem" title="AirQlt" id="ET5-kp-ugC">
                         <barButtonItem key="leftBarButtonItem" image="Menu" id="S3j-KR-IXg">
                             <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <connections>
+                                <action selector="showLeftMenu:" destination="vOI-N4-qdp" id="RW4-ou-UIO"/>
+                            </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" image="Map" id="f5G-my-roo">
                             <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <connections>
+                                <action selector="showCities:" destination="vOI-N4-qdp" id="41M-Gc-IIV"/>
+                            </connections>
                         </barButtonItem>
                     </navigationItem>
                 </viewController>
