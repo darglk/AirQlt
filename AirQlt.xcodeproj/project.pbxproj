@@ -28,6 +28,8 @@
 		E5C92D871E72EEE4000F4CF7 /* OpenSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E5C92D7C1E72EEE4000F4CF7 /* OpenSans-Regular.ttf */; };
 		E5C92D881E72EEE4000F4CF7 /* OpenSans-Semibold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E5C92D7D1E72EEE4000F4CF7 /* OpenSans-Semibold.ttf */; };
 		E5C92D891E72EEE4000F4CF7 /* OpenSans-SemiboldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E5C92D7E1E72EEE4000F4CF7 /* OpenSans-SemiboldItalic.ttf */; };
+		E5C92D8B1E72F1FC000F4CF7 /* ResideMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5C92D8A1E72F1FC000F4CF7 /* ResideMenuViewController.swift */; };
+		E5C92D8D1E72FA83000F4CF7 /* LeftMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5C92D8C1E72FA83000F4CF7 /* LeftMenuViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -82,6 +84,8 @@
 		E5C92D7C1E72EEE4000F4CF7 /* OpenSans-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "OpenSans-Regular.ttf"; path = "../../../Downloads/Open_Sans/OpenSans-Regular.ttf"; sourceTree = "<group>"; };
 		E5C92D7D1E72EEE4000F4CF7 /* OpenSans-Semibold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "OpenSans-Semibold.ttf"; path = "../../../Downloads/Open_Sans/OpenSans-Semibold.ttf"; sourceTree = "<group>"; };
 		E5C92D7E1E72EEE4000F4CF7 /* OpenSans-SemiboldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "OpenSans-SemiboldItalic.ttf"; path = "../../../Downloads/Open_Sans/OpenSans-SemiboldItalic.ttf"; sourceTree = "<group>"; };
+		E5C92D8A1E72F1FC000F4CF7 /* ResideMenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResideMenuViewController.swift; sourceTree = "<group>"; };
+		E5C92D8C1E72FA83000F4CF7 /* LeftMenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LeftMenuViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -168,6 +172,8 @@
 				E5C92D4B1E72EB9D000F4CF7 /* LaunchScreen.storyboard */,
 				E5C92D4E1E72EB9E000F4CF7 /* Info.plist */,
 				E5C92D701E72EBBD000F4CF7 /* AirQlt-Bridging-Header.h */,
+				E5C92D8A1E72F1FC000F4CF7 /* ResideMenuViewController.swift */,
+				E5C92D8C1E72FA83000F4CF7 /* LeftMenuViewController.swift */,
 			);
 			path = AirQlt;
 			sourceTree = "<group>";
@@ -504,7 +510,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E5C92D8B1E72F1FC000F4CF7 /* ResideMenuViewController.swift in Sources */,
 				E5C92D451E72EB9D000F4CF7 /* MeausermentViewController.swift in Sources */,
+				E5C92D8D1E72FA83000F4CF7 /* LeftMenuViewController.swift in Sources */,
 				E5C92D431E72EB9D000F4CF7 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
