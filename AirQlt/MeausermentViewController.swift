@@ -11,6 +11,15 @@ import RESideMenu
 
 class MesauermentViewController: UIViewController {
 
+    @IBOutlet weak var pollutionPartName: UILabel!
+    @IBOutlet weak var actualDensity: UILabel!
+    @IBOutlet weak var actualDensityNumber: UILabel!
+    @IBOutlet weak var whenMeasured: UILabel!
+    @IBOutlet weak var whenMeasuredTime: UILabel!
+    @IBOutlet weak var pollutionPercentage: UILabel!
+    
+    @IBOutlet weak var measurementsCollectionView: UICollectionView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName:UIColor.white]
@@ -32,3 +41,6 @@ class MesauermentViewController: UIViewController {
     }
 }
 
+extension MesauermentViewController : UICollectionViewDelegate, UICollectionViewDataSource {
+    
+}

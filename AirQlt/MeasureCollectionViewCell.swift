@@ -9,5 +9,8 @@
 import UIKit
 
 class MeasureCollectionViewCell: UICollectionViewCell {
-    
+    @IBOutlet weak var airPollutionPartName: UILabel!
+    @IBOutlet weak var airPollutionPartPercentageNumber: UILabel!
+    @IBOutlet weak var airPollutionPartUnitNumber: UILabel!
+    @IBOutlet weak var unitLabel: UILabel!
 }
