@@ -1,0 +1,6 @@
+framework module Pods_AirQltTests {
+  umbrella header "Pods-AirQltTests-umbrella.h"
+
+  export *
+  module * { export * }
+}

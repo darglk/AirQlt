@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		514B19082D92CEE2C68AD1C0 /* Pods_AirQltUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9520D9638F5ED2FE7DA0218F /* Pods_AirQltUITests.framework */; };
+		72F2DECCC012C08AD3A3F8C5 /* Pods_AirQltTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1ED4D4C6AE4E3316E1FBA99E /* Pods_AirQltTests.framework */; };
+		BEA16A9DA7948F8424800E75 /* Pods_AirQlt.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1864CFAE6B03306968BF3BF0 /* Pods_AirQlt.framework */; };
 		E5C92D431E72EB9D000F4CF7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5C92D421E72EB9D000F4CF7 /* AppDelegate.swift */; };
 		E5C92D451E72EB9D000F4CF7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5C92D441E72EB9D000F4CF7 /* ViewController.swift */; };
 		E5C92D481E72EB9D000F4CF7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E5C92D461E72EB9D000F4CF7 /* Main.storyboard */; };
@@ -34,6 +37,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1864CFAE6B03306968BF3BF0 /* Pods_AirQlt.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AirQlt.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1ED4D4C6AE4E3316E1FBA99E /* Pods_AirQltTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AirQltTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		31B82583024E106ADBA73F3D /* Pods-AirQlt.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AirQlt.release.xcconfig"; path = "Pods/Target Support Files/Pods-AirQlt/Pods-AirQlt.release.xcconfig"; sourceTree = "<group>"; };
+		9520D9638F5ED2FE7DA0218F /* Pods_AirQltUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AirQltUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B63F9CD58A4FAFF5BF173CCE /* Pods-AirQltUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AirQltUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AirQltUITests/Pods-AirQltUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		BEE123264633E2B9573DF747 /* Pods-AirQltTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AirQltTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AirQltTests/Pods-AirQltTests.debug.xcconfig"; sourceTree = "<group>"; };
+		D10E6A31E8D09902778AEBB4 /* Pods-AirQltTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AirQltTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-AirQltTests/Pods-AirQltTests.release.xcconfig"; sourceTree = "<group>"; };
+		D549F41B8AFDC11562DAFC47 /* Pods-AirQltUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AirQltUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-AirQltUITests/Pods-AirQltUITests.release.xcconfig"; sourceTree = "<group>"; };
+		DA2627725CF77FFD7D0606EB /* Pods-AirQlt.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AirQlt.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AirQlt/Pods-AirQlt.debug.xcconfig"; sourceTree = "<group>"; };
 		E5C92D3F1E72EB9D000F4CF7 /* AirQlt.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AirQlt.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E5C92D421E72EB9D000F4CF7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E5C92D441E72EB9D000F4CF7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -47,6 +59,7 @@
 		E5C92D5E1E72EB9E000F4CF7 /* AirQltUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AirQltUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E5C92D621E72EB9F000F4CF7 /* AirQltUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AirQltUITests.swift; sourceTree = "<group>"; };
 		E5C92D641E72EB9F000F4CF7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E5C92D701E72EBBD000F4CF7 /* AirQlt-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AirQlt-Bridging-Header.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +67,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BEA16A9DA7948F8424800E75 /* Pods_AirQlt.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -61,6 +75,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				72F2DECCC012C08AD3A3F8C5 /* Pods_AirQltTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -68,12 +83,36 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				514B19082D92CEE2C68AD1C0 /* Pods_AirQltUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1F493E0552DDE17C0899AE48 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				DA2627725CF77FFD7D0606EB /* Pods-AirQlt.debug.xcconfig */,
+				31B82583024E106ADBA73F3D /* Pods-AirQlt.release.xcconfig */,
+				BEE123264633E2B9573DF747 /* Pods-AirQltTests.debug.xcconfig */,
+				D10E6A31E8D09902778AEBB4 /* Pods-AirQltTests.release.xcconfig */,
+				B63F9CD58A4FAFF5BF173CCE /* Pods-AirQltUITests.debug.xcconfig */,
+				D549F41B8AFDC11562DAFC47 /* Pods-AirQltUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		9713F00AD18481129E655745 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1864CFAE6B03306968BF3BF0 /* Pods_AirQlt.framework */,
+				1ED4D4C6AE4E3316E1FBA99E /* Pods_AirQltTests.framework */,
+				9520D9638F5ED2FE7DA0218F /* Pods_AirQltUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		E5C92D361E72EB9D000F4CF7 = {
 			isa = PBXGroup;
 			children = (
@@ -81,6 +120,8 @@
 				E5C92D561E72EB9E000F4CF7 /* AirQltTests */,
 				E5C92D611E72EB9E000F4CF7 /* AirQltUITests */,
 				E5C92D401E72EB9D000F4CF7 /* Products */,
+				1F493E0552DDE17C0899AE48 /* Pods */,
+				9713F00AD18481129E655745 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -103,6 +144,7 @@
 				E5C92D491E72EB9D000F4CF7 /* Assets.xcassets */,
 				E5C92D4B1E72EB9D000F4CF7 /* LaunchScreen.storyboard */,
 				E5C92D4E1E72EB9E000F4CF7 /* Info.plist */,
+				E5C92D701E72EBBD000F4CF7 /* AirQlt-Bridging-Header.h */,
 			);
 			path = AirQlt;
 			sourceTree = "<group>";
@@ -132,9 +174,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = E5C92D671E72EB9F000F4CF7 /* Build configuration list for PBXNativeTarget "AirQlt" */;
 			buildPhases = (
+				31AD96DDD4AE7A3AB3A061D6 /* [CP] Check Pods Manifest.lock */,
 				E5C92D3B1E72EB9D000F4CF7 /* Sources */,
 				E5C92D3C1E72EB9D000F4CF7 /* Frameworks */,
 				E5C92D3D1E72EB9D000F4CF7 /* Resources */,
+				0257F2777A4DE53CFA1165D6 /* [CP] Embed Pods Frameworks */,
+				FFAD0066384F694FB68E1467 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -149,9 +194,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = E5C92D6A1E72EB9F000F4CF7 /* Build configuration list for PBXNativeTarget "AirQltTests" */;
 			buildPhases = (
+				BF2C1A040A99DCA50A05B625 /* [CP] Check Pods Manifest.lock */,
 				E5C92D4F1E72EB9E000F4CF7 /* Sources */,
 				E5C92D501E72EB9E000F4CF7 /* Frameworks */,
 				E5C92D511E72EB9E000F4CF7 /* Resources */,
+				ECCA459EA13CC0CAF121CC49 /* [CP] Embed Pods Frameworks */,
+				01849C0791F2718F68FD0682 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -167,9 +215,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = E5C92D6D1E72EB9F000F4CF7 /* Build configuration list for PBXNativeTarget "AirQltUITests" */;
 			buildPhases = (
+				8A25332AE8A75E003425AC01 /* [CP] Check Pods Manifest.lock */,
 				E5C92D5A1E72EB9E000F4CF7 /* Sources */,
 				E5C92D5B1E72EB9E000F4CF7 /* Frameworks */,
 				E5C92D5C1E72EB9E000F4CF7 /* Resources */,
+				EB7E705CA0AE208D56FEB579 /* [CP] Embed Pods Frameworks */,
+				86D5356C3F1D4EB74ECD61EC /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -194,6 +245,7 @@
 					E5C92D3E1E72EB9D000F4CF7 = {
 						CreatedOnToolsVersion = 8.2.1;
 						DevelopmentTeam = DH6HSAW729;
+						LastSwiftMigration = 0820;
 						ProvisioningStyle = Automatic;
 					};
 					E5C92D521E72EB9E000F4CF7 = {
@@ -256,6 +308,144 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		01849C0791F2718F68FD0682 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-AirQltTests/Pods-AirQltTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		0257F2777A4DE53CFA1165D6 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-AirQlt/Pods-AirQlt-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		31AD96DDD4AE7A3AB3A061D6 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		86D5356C3F1D4EB74ECD61EC /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-AirQltUITests/Pods-AirQltUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8A25332AE8A75E003425AC01 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		BF2C1A040A99DCA50A05B625 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		EB7E705CA0AE208D56FEB579 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-AirQltUITests/Pods-AirQltUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		ECCA459EA13CC0CAF121CC49 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-AirQltTests/Pods-AirQltTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FFAD0066384F694FB68E1467 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-AirQlt/Pods-AirQlt-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		E5C92D3B1E72EB9D000F4CF7 /* Sources */ = {
@@ -413,32 +603,40 @@
 		};
 		E5C92D681E72EB9F000F4CF7 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DA2627725CF77FFD7D0606EB /* Pods-AirQlt.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = DH6HSAW729;
 				INFOPLIST_FILE = AirQlt/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = darglk.AirQlt;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "AirQlt/AirQlt-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
 		E5C92D691E72EB9F000F4CF7 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 31B82583024E106ADBA73F3D /* Pods-AirQlt.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = DH6HSAW729;
 				INFOPLIST_FILE = AirQlt/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = darglk.AirQlt;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "AirQlt/AirQlt-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
 		E5C92D6B1E72EB9F000F4CF7 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BEE123264633E2B9573DF747 /* Pods-AirQltTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -454,6 +652,7 @@
 		};
 		E5C92D6C1E72EB9F000F4CF7 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D10E6A31E8D09902778AEBB4 /* Pods-AirQltTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -469,6 +668,7 @@
 		};
 		E5C92D6E1E72EB9F000F4CF7 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B63F9CD58A4FAFF5BF173CCE /* Pods-AirQltUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				DEVELOPMENT_TEAM = DH6HSAW729;
@@ -483,6 +683,7 @@
 		};
 		E5C92D6F1E72EB9F000F4CF7 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D549F41B8AFDC11562DAFC47 /* Pods-AirQltUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				DEVELOPMENT_TEAM = DH6HSAW729;
