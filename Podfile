@@ -8,7 +8,7 @@ target 'AirQlt' do
   # Pods for AirQlt
 
     pod 'RESideMenu', '~> 4.0.7'
-
+    pod 'Alamofire'
   target 'AirQltTests' do
     inherit! :search_paths
     # Pods for testing

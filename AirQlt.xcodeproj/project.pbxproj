@@ -11,12 +11,23 @@
 		72F2DECCC012C08AD3A3F8C5 /* Pods_AirQltTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1ED4D4C6AE4E3316E1FBA99E /* Pods_AirQltTests.framework */; };
 		BEA16A9DA7948F8424800E75 /* Pods_AirQlt.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1864CFAE6B03306968BF3BF0 /* Pods_AirQlt.framework */; };
 		E5C92D431E72EB9D000F4CF7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5C92D421E72EB9D000F4CF7 /* AppDelegate.swift */; };
-		E5C92D451E72EB9D000F4CF7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5C92D441E72EB9D000F4CF7 /* ViewController.swift */; };
+		E5C92D451E72EB9D000F4CF7 /* MeausermentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5C92D441E72EB9D000F4CF7 /* MeausermentViewController.swift */; };
 		E5C92D481E72EB9D000F4CF7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E5C92D461E72EB9D000F4CF7 /* Main.storyboard */; };
 		E5C92D4A1E72EB9D000F4CF7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E5C92D491E72EB9D000F4CF7 /* Assets.xcassets */; };
 		E5C92D4D1E72EB9D000F4CF7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E5C92D4B1E72EB9D000F4CF7 /* LaunchScreen.storyboard */; };
 		E5C92D581E72EB9E000F4CF7 /* AirQltTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5C92D571E72EB9E000F4CF7 /* AirQltTests.swift */; };
 		E5C92D631E72EB9F000F4CF7 /* AirQltUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5C92D621E72EB9F000F4CF7 /* AirQltUITests.swift */; };
+		E5C92D7F1E72EEE4000F4CF7 /* LICENSE.txt in Resources */ = {isa = PBXBuildFile; fileRef = E5C92D741E72EEE4000F4CF7 /* LICENSE.txt */; };
+		E5C92D801E72EEE4000F4CF7 /* OpenSans-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E5C92D751E72EEE4000F4CF7 /* OpenSans-Bold.ttf */; };
+		E5C92D811E72EEE4000F4CF7 /* OpenSans-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E5C92D761E72EEE4000F4CF7 /* OpenSans-BoldItalic.ttf */; };
+		E5C92D821E72EEE4000F4CF7 /* OpenSans-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E5C92D771E72EEE4000F4CF7 /* OpenSans-ExtraBold.ttf */; };
+		E5C92D831E72EEE4000F4CF7 /* OpenSans-ExtraBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E5C92D781E72EEE4000F4CF7 /* OpenSans-ExtraBoldItalic.ttf */; };
+		E5C92D841E72EEE4000F4CF7 /* OpenSans-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E5C92D791E72EEE4000F4CF7 /* OpenSans-Italic.ttf */; };
+		E5C92D851E72EEE4000F4CF7 /* OpenSans-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E5C92D7A1E72EEE4000F4CF7 /* OpenSans-Light.ttf */; };
+		E5C92D861E72EEE4000F4CF7 /* OpenSans-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E5C92D7B1E72EEE4000F4CF7 /* OpenSans-LightItalic.ttf */; };
+		E5C92D871E72EEE4000F4CF7 /* OpenSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E5C92D7C1E72EEE4000F4CF7 /* OpenSans-Regular.ttf */; };
+		E5C92D881E72EEE4000F4CF7 /* OpenSans-Semibold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E5C92D7D1E72EEE4000F4CF7 /* OpenSans-Semibold.ttf */; };
+		E5C92D891E72EEE4000F4CF7 /* OpenSans-SemiboldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E5C92D7E1E72EEE4000F4CF7 /* OpenSans-SemiboldItalic.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,7 +59,7 @@
 		DA2627725CF77FFD7D0606EB /* Pods-AirQlt.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AirQlt.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AirQlt/Pods-AirQlt.debug.xcconfig"; sourceTree = "<group>"; };
 		E5C92D3F1E72EB9D000F4CF7 /* AirQlt.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AirQlt.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E5C92D421E72EB9D000F4CF7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		E5C92D441E72EB9D000F4CF7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		E5C92D441E72EB9D000F4CF7 /* MeausermentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeausermentViewController.swift; sourceTree = "<group>"; };
 		E5C92D471E72EB9D000F4CF7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E5C92D491E72EB9D000F4CF7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E5C92D4C1E72EB9D000F4CF7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -60,6 +71,17 @@
 		E5C92D621E72EB9F000F4CF7 /* AirQltUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AirQltUITests.swift; sourceTree = "<group>"; };
 		E5C92D641E72EB9F000F4CF7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E5C92D701E72EBBD000F4CF7 /* AirQlt-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AirQlt-Bridging-Header.h"; sourceTree = "<group>"; };
+		E5C92D741E72EEE4000F4CF7 /* LICENSE.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = LICENSE.txt; path = ../../../Downloads/Open_Sans/LICENSE.txt; sourceTree = "<group>"; };
+		E5C92D751E72EEE4000F4CF7 /* OpenSans-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "OpenSans-Bold.ttf"; path = "../../../Downloads/Open_Sans/OpenSans-Bold.ttf"; sourceTree = "<group>"; };
+		E5C92D761E72EEE4000F4CF7 /* OpenSans-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "OpenSans-BoldItalic.ttf"; path = "../../../Downloads/Open_Sans/OpenSans-BoldItalic.ttf"; sourceTree = "<group>"; };
+		E5C92D771E72EEE4000F4CF7 /* OpenSans-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "OpenSans-ExtraBold.ttf"; path = "../../../Downloads/Open_Sans/OpenSans-ExtraBold.ttf"; sourceTree = "<group>"; };
+		E5C92D781E72EEE4000F4CF7 /* OpenSans-ExtraBoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "OpenSans-ExtraBoldItalic.ttf"; path = "../../../Downloads/Open_Sans/OpenSans-ExtraBoldItalic.ttf"; sourceTree = "<group>"; };
+		E5C92D791E72EEE4000F4CF7 /* OpenSans-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "OpenSans-Italic.ttf"; path = "../../../Downloads/Open_Sans/OpenSans-Italic.ttf"; sourceTree = "<group>"; };
+		E5C92D7A1E72EEE4000F4CF7 /* OpenSans-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "OpenSans-Light.ttf"; path = "../../../Downloads/Open_Sans/OpenSans-Light.ttf"; sourceTree = "<group>"; };
+		E5C92D7B1E72EEE4000F4CF7 /* OpenSans-LightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "OpenSans-LightItalic.ttf"; path = "../../../Downloads/Open_Sans/OpenSans-LightItalic.ttf"; sourceTree = "<group>"; };
+		E5C92D7C1E72EEE4000F4CF7 /* OpenSans-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "OpenSans-Regular.ttf"; path = "../../../Downloads/Open_Sans/OpenSans-Regular.ttf"; sourceTree = "<group>"; };
+		E5C92D7D1E72EEE4000F4CF7 /* OpenSans-Semibold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "OpenSans-Semibold.ttf"; path = "../../../Downloads/Open_Sans/OpenSans-Semibold.ttf"; sourceTree = "<group>"; };
+		E5C92D7E1E72EEE4000F4CF7 /* OpenSans-SemiboldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "OpenSans-SemiboldItalic.ttf"; path = "../../../Downloads/Open_Sans/OpenSans-SemiboldItalic.ttf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,6 +138,7 @@
 		E5C92D361E72EB9D000F4CF7 = {
 			isa = PBXGroup;
 			children = (
+				E5C92D731E72EE9A000F4CF7 /* Font */,
 				E5C92D411E72EB9D000F4CF7 /* AirQlt */,
 				E5C92D561E72EB9E000F4CF7 /* AirQltTests */,
 				E5C92D611E72EB9E000F4CF7 /* AirQltUITests */,
@@ -139,7 +162,7 @@
 			isa = PBXGroup;
 			children = (
 				E5C92D421E72EB9D000F4CF7 /* AppDelegate.swift */,
-				E5C92D441E72EB9D000F4CF7 /* ViewController.swift */,
+				E5C92D441E72EB9D000F4CF7 /* MeausermentViewController.swift */,
 				E5C92D461E72EB9D000F4CF7 /* Main.storyboard */,
 				E5C92D491E72EB9D000F4CF7 /* Assets.xcassets */,
 				E5C92D4B1E72EB9D000F4CF7 /* LaunchScreen.storyboard */,
@@ -165,6 +188,24 @@
 				E5C92D641E72EB9F000F4CF7 /* Info.plist */,
 			);
 			path = AirQltUITests;
+			sourceTree = "<group>";
+		};
+		E5C92D731E72EE9A000F4CF7 /* Font */ = {
+			isa = PBXGroup;
+			children = (
+				E5C92D741E72EEE4000F4CF7 /* LICENSE.txt */,
+				E5C92D751E72EEE4000F4CF7 /* OpenSans-Bold.ttf */,
+				E5C92D761E72EEE4000F4CF7 /* OpenSans-BoldItalic.ttf */,
+				E5C92D771E72EEE4000F4CF7 /* OpenSans-ExtraBold.ttf */,
+				E5C92D781E72EEE4000F4CF7 /* OpenSans-ExtraBoldItalic.ttf */,
+				E5C92D791E72EEE4000F4CF7 /* OpenSans-Italic.ttf */,
+				E5C92D7A1E72EEE4000F4CF7 /* OpenSans-Light.ttf */,
+				E5C92D7B1E72EEE4000F4CF7 /* OpenSans-LightItalic.ttf */,
+				E5C92D7C1E72EEE4000F4CF7 /* OpenSans-Regular.ttf */,
+				E5C92D7D1E72EEE4000F4CF7 /* OpenSans-Semibold.ttf */,
+				E5C92D7E1E72EEE4000F4CF7 /* OpenSans-SemiboldItalic.ttf */,
+			);
+			name = Font;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -287,9 +328,20 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E5C92D841E72EEE4000F4CF7 /* OpenSans-Italic.ttf in Resources */,
+				E5C92D811E72EEE4000F4CF7 /* OpenSans-BoldItalic.ttf in Resources */,
+				E5C92D7F1E72EEE4000F4CF7 /* LICENSE.txt in Resources */,
+				E5C92D881E72EEE4000F4CF7 /* OpenSans-Semibold.ttf in Resources */,
+				E5C92D821E72EEE4000F4CF7 /* OpenSans-ExtraBold.ttf in Resources */,
 				E5C92D4D1E72EB9D000F4CF7 /* LaunchScreen.storyboard in Resources */,
+				E5C92D861E72EEE4000F4CF7 /* OpenSans-LightItalic.ttf in Resources */,
 				E5C92D4A1E72EB9D000F4CF7 /* Assets.xcassets in Resources */,
+				E5C92D801E72EEE4000F4CF7 /* OpenSans-Bold.ttf in Resources */,
 				E5C92D481E72EB9D000F4CF7 /* Main.storyboard in Resources */,
+				E5C92D891E72EEE4000F4CF7 /* OpenSans-SemiboldItalic.ttf in Resources */,
+				E5C92D851E72EEE4000F4CF7 /* OpenSans-Light.ttf in Resources */,
+				E5C92D871E72EEE4000F4CF7 /* OpenSans-Regular.ttf in Resources */,
+				E5C92D831E72EEE4000F4CF7 /* OpenSans-ExtraBoldItalic.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -452,7 +504,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E5C92D451E72EB9D000F4CF7 /* ViewController.swift in Sources */,
+				E5C92D451E72EB9D000F4CF7 /* MeausermentViewController.swift in Sources */,
 				E5C92D431E72EB9D000F4CF7 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -715,6 +767,7 @@
 				E5C92D691E72EB9F000F4CF7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		E5C92D6A1E72EB9F000F4CF7 /* Build configuration list for PBXNativeTarget "AirQltTests" */ = {
 			isa = XCConfigurationList;
@@ -723,6 +776,7 @@
 				E5C92D6C1E72EB9F000F4CF7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		E5C92D6D1E72EB9F000F4CF7 /* Build configuration list for PBXNativeTarget "AirQltUITests" */ = {
 			isa = XCConfigurationList;
@@ -731,6 +785,7 @@
 				E5C92D6F1E72EB9F000F4CF7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
