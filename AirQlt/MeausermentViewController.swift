@@ -8,6 +8,7 @@
 
 import UIKit
 import RESideMenu
+import Alamofire
 
 class MesauermentViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
 
@@ -21,20 +22,42 @@ class MesauermentViewController: UIViewController, UICollectionViewDataSource, U
     @IBOutlet weak var measurementsCollectionView: UICollectionView!
     var measurement:AirMeasurement!
     
+    func fetchRecordsFromApi(city: String) {
+        Alamofire.request("https://api.waqi.info/feed/\(city)/?token=\(API_KEY)").responseJSON { response in
+            if let json = response.result.value {
+                switch response.result {
+                case .success:
+                    let responseResult = json as! NSDictionary
+                    self.measurement = AirMeasurement(withDictionary: responseResult)
+                case .failure(let error):
+                    print(error)
+                }
+            }
+            DispatchQueue.main.async {
+                self.measurementsCollectionView.reloadData()
+                self.setLabelsAtIndex(index: 0)
+                self.title = self.measurement.city
+            }
+        }
+    }
+    
+    func setLabelsAtIndex(index: Int) {
+        self.pollutionPartName.text = self.measurement.airQualityIndexes[index].airQualityIndexName
+        self.actualDensityNumber.text = String(self.measurement.airQualityIndexes[index].airQualityIndexValue)
+        self.whenMeasuredTime.text = self.measurement.whenMeasured
+        self.pollutionPercentage.text = String(self.measurement.airQualityIndexes[index].airQualityIndexValue) // change this to percent number
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.measurement = AirMeasurement()
+        fetchRecordsFromApi(city: "krakow")
+        
         self.navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName:UIColor.white]
-        let communicator = APICommunicator(URLAddress: "https://api.waqi.info/feed/cracow/?token=demo")
-        measurement = AirMeasurement(apiCommunicator: communicator)
-        measurement.fetchMeasurement()
-        measurement.airQualityIndexes.append(AirQualityIndex(airQualityIndexName: "CO", airQualityIndexValue: 5.5))
         measurementsCollectionView.delegate = self
         measurementsCollectionView.dataSource = self
         
-        pollutionPartName.text = measurement.airQualityIndexes[0].airQualityIndexName
-        actualDensityNumber.text = String(measurement.airQualityIndexes[0].airQualityIndexValue)
-        whenMeasuredTime.text = measurement.whenMeasured
-        pollutionPercentage.text = String(measurement.airQualityIndexes[0].airQualityIndexValue) // change this to percent number
+        
     }
     
     override func didReceiveMemoryWarning() {
@@ -62,11 +85,24 @@ class MesauermentViewController: UIViewController, UICollectionViewDataSource, U
         cell.airPollutionPartPercentageNumber.text = String(airQualityIndex.airQualityIndexValue) //change this to percent number
         cell.unitLabel.text = "μg/m3"
         cell.layer.borderWidth = 1.0;
-        cell.layer.borderColor = UIColor.lightGray.cgColor;
+        cell.layer.borderColor = (indexPath.row == 0) ? UIColor.green.cgColor : UIColor.lightGray.cgColor;
         return cell
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return measurement.airQualityIndexes.count
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        
+        collectionView.cellForItem(at: IndexPath(item: 0, section: 0))?.layer.borderColor = UIColor.lightGray.cgColor
+        let cell = collectionView.cellForItem(at: indexPath) as! MeasureCollectionViewCell
+        cell.layer.borderColor = UIColor.green.cgColor
+        setLabelsAtIndex(index: indexPath.row)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didDeselectItemAt indexPath: IndexPath) {
+        let cell = collectionView.cellForItem(at: indexPath) as! MeasureCollectionViewCell
+        cell.layer.borderColor = UIColor.lightGray.cgColor;
     }
 }

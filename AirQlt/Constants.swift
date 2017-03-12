@@ -1,5 +1,5 @@
 //
-//  PAPICommunicator.swift
+//  Constants.swift
 //  AirQlt
 //
 //  Created by Dariusz Kulig on 12.03.2017.
@@ -8,6 +8,4 @@
 
 import Foundation
 
-protocol PAPICommunicator {
-    func get() -> AnyObject?
-}
+let API_KEY = "42f4616237f399cf57daf96bd20ad84c528420ac"

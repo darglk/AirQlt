@@ -7,20 +7,30 @@
 //
 
 import Foundation
+import Alamofire
 
 class AirMeasurement {
-    let apiCommunicator: PAPICommunicator!
     var airQualityIndexes:[AirQualityIndex] = []
-    let city:String = ""
-    let whenMeasured:String=""
+    var city:String = ""
+    var whenMeasured:String=""
     
-    init(apiCommunicator: PAPICommunicator) {
-        self.apiCommunicator = apiCommunicator
+    init() {
+        
     }
     
-    func fetchMeasurement() {
-        let rawData = self.apiCommunicator.get()
-        //deserialize json
+    init(withDictionary: NSDictionary) {
+        self.city = ((withDictionary.object(forKey: "data") as! NSDictionary).object(forKey: "city") as! NSDictionary).object(forKey: "name") as! String
+        self.whenMeasured = ((withDictionary.object(forKey: "data") as! NSDictionary).object(forKey: "time") as! NSDictionary).object(forKey: "s") as! String
+        
+        let partialMeasurements = (withDictionary.object(forKey: "data") as! NSDictionary).object(forKey: "iaqi") as! NSDictionary
+        
+        for index in partialMeasurements.allKeys {
+            let partialMeasurement = partialMeasurements.object(forKey: index) as! NSDictionary
+            
+            let aiq = AirQualityIndex(airQualityIndexName: index as! String, airQualityIndexValue: partialMeasurement.object(forKey: "v") as! Double)
+            self.airQualityIndexes.append(aiq)
+        }
     }
+    
     
 }
