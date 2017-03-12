@@ -11,9 +11,11 @@ import Foundation
 class AirQualityIndex {
     var airQualityIndexName:String!
     var airQualityIndexValue:Double!
+    var airQualityIndexLongName:String!
     
-    init(airQualityIndexName:String, airQualityIndexValue: Double) {
+    init(airQualityIndexName:String, airQualityIndexValue: Double, airQualityLongValue: String) {
         self.airQualityIndexName = airQualityIndexName
         self.airQualityIndexValue = airQualityIndexValue
+        self.airQualityIndexLongName = airQualityLongValue
     }
 }

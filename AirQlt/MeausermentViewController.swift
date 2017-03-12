@@ -22,36 +22,38 @@ class MesauermentViewController: UIViewController, UICollectionViewDataSource, U
     @IBOutlet weak var measurementsCollectionView: UICollectionView!
     var measurement:AirMeasurement!
     
-    func fetchRecordsFromApi(city: String) {
+    func fetchRecordsFromApi(city: String, completionHandler: ((String?) ->())?) {
         Alamofire.request("https://api.waqi.info/feed/\(city)/?token=\(API_KEY)").responseJSON { response in
             if let json = response.result.value {
                 switch response.result {
                 case .success:
                     let responseResult = json as! NSDictionary
                     self.measurement = AirMeasurement(withDictionary: responseResult)
+                    completionHandler?("")
                 case .failure(let error):
                     print(error)
+                    completionHandler?("")
                 }
             }
             DispatchQueue.main.async {
                 self.measurementsCollectionView.reloadData()
                 self.setLabelsAtIndex(index: 0)
-                self.title = self.measurement.city
+                self.title = self.measurement.city.components(separatedBy: ",")[0]
             }
         }
     }
     
     func setLabelsAtIndex(index: Int) {
-        self.pollutionPartName.text = self.measurement.airQualityIndexes[index].airQualityIndexName
-        self.actualDensityNumber.text = String(self.measurement.airQualityIndexes[index].airQualityIndexValue)
+        self.pollutionPartName.text = self.measurement.airQualityIndexes[index].airQualityIndexLongName
+        self.actualDensityNumber.text = String(self.measurement.airQualityIndexes[index].airQualityIndexValue) + " μg/m\u{B3}"
         self.whenMeasuredTime.text = self.measurement.whenMeasured
-        self.pollutionPercentage.text = String(self.measurement.airQualityIndexes[index].airQualityIndexValue) // change this to percent number
+        self.pollutionPercentage.text = String((self.measurement.airQualityIndexes[index].airQualityIndexValue / NORM[self.measurement.airQualityIndexes[index].airQualityIndexName]!) * 100) + "%" // change this to be more brief
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.measurement = AirMeasurement()
-        fetchRecordsFromApi(city: "krakow")
+        fetchRecordsFromApi(city: "krakow", completionHandler: nil)
         
         self.navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName:UIColor.white]
         measurementsCollectionView.delegate = self
@@ -82,8 +84,8 @@ class MesauermentViewController: UIViewController, UICollectionViewDataSource, U
         
         cell.airPollutionPartName.text = airQualityIndex.airQualityIndexName
         cell.airPollutionPartUnitNumber.text = String(airQualityIndex.airQualityIndexValue)
-        cell.airPollutionPartPercentageNumber.text = String(airQualityIndex.airQualityIndexValue) //change this to percent number
-        cell.unitLabel.text = "μg/m3"
+        cell.airPollutionPartPercentageNumber.text = String((airQualityIndex.airQualityIndexValue / NORM[airQualityIndex.airQualityIndexName]!) * 100) + "%" // change this to be more brief
+        cell.unitLabel.text = "μg/m\u{B3}"
         cell.layer.borderWidth = 1.0;
         cell.layer.borderColor = (indexPath.row == 0) ? UIColor.green.cgColor : UIColor.lightGray.cgColor;
         return cell

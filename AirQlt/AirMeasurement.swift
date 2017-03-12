@@ -26,8 +26,17 @@ class AirMeasurement {
         
         for index in partialMeasurements.allKeys {
             let partialMeasurement = partialMeasurements.object(forKey: index) as! NSDictionary
+            let indexStringValue = index as! String
+            switch indexStringValue {
+            case "p","t","h", "w", "r", "d":
+                continue
+            default: break
+            }
             
-            let aiq = AirQualityIndex(airQualityIndexName: index as! String, airQualityIndexValue: partialMeasurement.object(forKey: "v") as! Double)
+            let indexName = UNITS[indexStringValue]?[0]
+            let longName = UNITS[indexStringValue]?[1]
+            let aiq = AirQualityIndex(airQualityIndexName: indexName!, airQualityIndexValue: partialMeasurement.object(forKey: "v") as! Double,
+                                      airQualityLongValue: longName!)
             self.airQualityIndexes.append(aiq)
         }
     }
