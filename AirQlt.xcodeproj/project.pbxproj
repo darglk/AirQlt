@@ -31,6 +31,12 @@
 		E5C92D8B1E72F1FC000F4CF7 /* ResideMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5C92D8A1E72F1FC000F4CF7 /* ResideMenuViewController.swift */; };
 		E5C92D8D1E72FA83000F4CF7 /* LeftMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5C92D8C1E72FA83000F4CF7 /* LeftMenuViewController.swift */; };
 		E5C92D8F1E7330E5000F4CF7 /* MeasureCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5C92D8E1E7330E5000F4CF7 /* MeasureCollectionViewCell.swift */; };
+		E5C92D951E754096000F4CF7 /* PAPICommunicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5C92D941E754096000F4CF7 /* PAPICommunicator.swift */; };
+		E5C92D971E7542E6000F4CF7 /* APICommunicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5C92D961E7542E6000F4CF7 /* APICommunicator.swift */; };
+		E5C92D991E754829000F4CF7 /* MeasurementTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5C92D981E754829000F4CF7 /* MeasurementTests.swift */; };
+		E5C92D9C1E75486A000F4CF7 /* PAPICommunicatorStub.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5C92D9B1E75486A000F4CF7 /* PAPICommunicatorStub.swift */; };
+		E5C92D9E1E7548C8000F4CF7 /* AirMeasurement.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5C92D9D1E7548C8000F4CF7 /* AirMeasurement.swift */; };
+		E5C92DA01E757619000F4CF7 /* AirQualityIndex.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5C92D9F1E757619000F4CF7 /* AirQualityIndex.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -88,6 +94,12 @@
 		E5C92D8A1E72F1FC000F4CF7 /* ResideMenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResideMenuViewController.swift; sourceTree = "<group>"; };
 		E5C92D8C1E72FA83000F4CF7 /* LeftMenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LeftMenuViewController.swift; sourceTree = "<group>"; };
 		E5C92D8E1E7330E5000F4CF7 /* MeasureCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MeasureCollectionViewCell.swift; sourceTree = "<group>"; };
+		E5C92D941E754096000F4CF7 /* PAPICommunicator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PAPICommunicator.swift; sourceTree = "<group>"; };
+		E5C92D961E7542E6000F4CF7 /* APICommunicator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APICommunicator.swift; sourceTree = "<group>"; };
+		E5C92D981E754829000F4CF7 /* MeasurementTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MeasurementTests.swift; sourceTree = "<group>"; };
+		E5C92D9B1E75486A000F4CF7 /* PAPICommunicatorStub.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PAPICommunicatorStub.swift; sourceTree = "<group>"; };
+		E5C92D9D1E7548C8000F4CF7 /* AirMeasurement.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AirMeasurement.swift; sourceTree = "<group>"; };
+		E5C92D9F1E757619000F4CF7 /* AirQualityIndex.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AirQualityIndex.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -167,16 +179,15 @@
 		E5C92D411E72EB9D000F4CF7 /* AirQlt */ = {
 			isa = PBXGroup;
 			children = (
+				E5C92D931E754062000F4CF7 /* Helpers */,
+				E5C92D921E75405A000F4CF7 /* Models */,
+				E5C92D911E75403A000F4CF7 /* Controllers */,
+				E5C92D901E754028000F4CF7 /* Views */,
 				E5C92D421E72EB9D000F4CF7 /* AppDelegate.swift */,
-				E5C92D441E72EB9D000F4CF7 /* MeausermentViewController.swift */,
 				E5C92D461E72EB9D000F4CF7 /* Main.storyboard */,
 				E5C92D491E72EB9D000F4CF7 /* Assets.xcassets */,
 				E5C92D4B1E72EB9D000F4CF7 /* LaunchScreen.storyboard */,
 				E5C92D4E1E72EB9E000F4CF7 /* Info.plist */,
-				E5C92D701E72EBBD000F4CF7 /* AirQlt-Bridging-Header.h */,
-				E5C92D8A1E72F1FC000F4CF7 /* ResideMenuViewController.swift */,
-				E5C92D8C1E72FA83000F4CF7 /* LeftMenuViewController.swift */,
-				E5C92D8E1E7330E5000F4CF7 /* MeasureCollectionViewCell.swift */,
 			);
 			path = AirQlt;
 			sourceTree = "<group>";
@@ -184,8 +195,10 @@
 		E5C92D561E72EB9E000F4CF7 /* AirQltTests */ = {
 			isa = PBXGroup;
 			children = (
+				E5C92D9A1E75484B000F4CF7 /* Mocks */,
 				E5C92D571E72EB9E000F4CF7 /* AirQltTests.swift */,
 				E5C92D591E72EB9E000F4CF7 /* Info.plist */,
+				E5C92D981E754829000F4CF7 /* MeasurementTests.swift */,
 			);
 			path = AirQltTests;
 			sourceTree = "<group>";
@@ -215,6 +228,51 @@
 				E5C92D7E1E72EEE4000F4CF7 /* OpenSans-SemiboldItalic.ttf */,
 			);
 			name = Font;
+			sourceTree = "<group>";
+		};
+		E5C92D901E754028000F4CF7 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				E5C92D8E1E7330E5000F4CF7 /* MeasureCollectionViewCell.swift */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		E5C92D911E75403A000F4CF7 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				E5C92D441E72EB9D000F4CF7 /* MeausermentViewController.swift */,
+				E5C92D8C1E72FA83000F4CF7 /* LeftMenuViewController.swift */,
+				E5C92D8A1E72F1FC000F4CF7 /* ResideMenuViewController.swift */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		E5C92D921E75405A000F4CF7 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				E5C92D9D1E7548C8000F4CF7 /* AirMeasurement.swift */,
+				E5C92D9F1E757619000F4CF7 /* AirQualityIndex.swift */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		E5C92D931E754062000F4CF7 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				E5C92D701E72EBBD000F4CF7 /* AirQlt-Bridging-Header.h */,
+				E5C92D941E754096000F4CF7 /* PAPICommunicator.swift */,
+				E5C92D961E7542E6000F4CF7 /* APICommunicator.swift */,
+			);
+			name = Helpers;
+			sourceTree = "<group>";
+		};
+		E5C92D9A1E75484B000F4CF7 /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				E5C92D9B1E75486A000F4CF7 /* PAPICommunicatorStub.swift */,
+			);
+			name = Mocks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -513,10 +571,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E5C92DA01E757619000F4CF7 /* AirQualityIndex.swift in Sources */,
 				E5C92D8F1E7330E5000F4CF7 /* MeasureCollectionViewCell.swift in Sources */,
+				E5C92D971E7542E6000F4CF7 /* APICommunicator.swift in Sources */,
+				E5C92D9E1E7548C8000F4CF7 /* AirMeasurement.swift in Sources */,
 				E5C92D8B1E72F1FC000F4CF7 /* ResideMenuViewController.swift in Sources */,
 				E5C92D451E72EB9D000F4CF7 /* MeausermentViewController.swift in Sources */,
 				E5C92D8D1E72FA83000F4CF7 /* LeftMenuViewController.swift in Sources */,
+				E5C92D951E754096000F4CF7 /* PAPICommunicator.swift in Sources */,
 				E5C92D431E72EB9D000F4CF7 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -525,7 +587,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E5C92D991E754829000F4CF7 /* MeasurementTests.swift in Sources */,
 				E5C92D581E72EB9E000F4CF7 /* AirQltTests.swift in Sources */,
+				E5C92D9C1E75486A000F4CF7 /* PAPICommunicatorStub.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

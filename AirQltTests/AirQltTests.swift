@@ -11,9 +11,14 @@ import XCTest
 
 class AirQltTests: XCTestCase {
     
+    var vc:MesauermentViewController!
+    
     override func setUp() {
         super.setUp()
-        // Put setup code here. This method is called before the invocation of each test method in the class.
+        let storyboard = UIStoryboard.init(name: "Main", bundle: Bundle.main)
+        vc = storyboard.instantiateViewController(withIdentifier: "MeasurementViewController") as! MesauermentViewController
+        _ = vc.view
+        
     }
     
     override func tearDown() {
@@ -21,9 +26,23 @@ class AirQltTests: XCTestCase {
         super.tearDown()
     }
     
-    func testExample() {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+    func testLabelsSetProperly() {
+        XCTAssert(vc.pollutionPartName.text == "CO")
+        XCTAssert(vc.actualDensityNumber.text == "5.5")
+        XCTAssert(vc.whenMeasuredTime.text == "")
+        XCTAssert(vc.pollutionPercentage.text == "5.5")
+    }
+    
+    func testCollectionViewSetProperly() {
+        XCTAssertNotNil(vc)
+        
+        let cell = vc.collectionView(vc.measurementsCollectionView, cellForItemAt: IndexPath(row: 0, section: 0)) as! MeasureCollectionViewCell
+        XCTAssertNotNil(cell)
+        XCTAssert(cell.airPollutionPartName.text == "CO")
+        XCTAssert(cell.airPollutionPartPercentageNumber.text == "5.5")
+        XCTAssert(cell.airPollutionPartUnitNumber.text == "5.5")
+        XCTAssert(cell.unitLabel.text == "μg/m3")
+        
     }
     
     func testPerformanceExample() {
