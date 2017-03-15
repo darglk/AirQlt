@@ -22,8 +22,15 @@ class MesauermentViewController: UIViewController, UICollectionViewDataSource, U
     @IBOutlet weak var measurementsCollectionView: UICollectionView!
     var measurement:AirMeasurement!
     
+    @IBAction func stationCellTapped(segue: UIStoryboardSegue) {
+    }
+    
+    @IBAction func close(segue: UIStoryboardSegue) {
+        
+    }
+    
     func fetchRecordsFromApi(city: String, completionHandler: ((String?) ->())?) {
-        Alamofire.request("https://api.waqi.info/feed/\(city)/?token=\(API_KEY)").responseJSON { response in
+        Alamofire.request("https://api.waqi.info/feed/@\(city)/?token=\(API_KEY)").responseJSON { response in
             if let json = response.result.value {
                 switch response.result {
                 case .success:
@@ -53,7 +60,7 @@ class MesauermentViewController: UIViewController, UICollectionViewDataSource, U
     override func viewDidLoad() {
         super.viewDidLoad()
         self.measurement = AirMeasurement()
-        fetchRecordsFromApi(city: "krakow", completionHandler: nil)
+        fetchRecordsFromApi(city: "8689", completionHandler: nil)
         
         self.navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName:UIColor.white]
         measurementsCollectionView.delegate = self
