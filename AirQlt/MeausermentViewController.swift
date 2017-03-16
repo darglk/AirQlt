@@ -30,6 +30,7 @@ class MesauermentViewController: UIViewController, UICollectionViewDataSource, U
     }
     
     func fetchRecordsFromApi(city: String, completionHandler: ((String?) ->())?) {
+        UIApplication.shared.isNetworkActivityIndicatorVisible = true
         Alamofire.request("https://api.waqi.info/feed/@\(city)/?token=\(API_KEY)").responseJSON { response in
             if let json = response.result.value {
                 switch response.result {
@@ -46,6 +47,7 @@ class MesauermentViewController: UIViewController, UICollectionViewDataSource, U
                 self.measurementsCollectionView.reloadData()
                 self.setLabelsAtIndex(index: 0)
                 self.title = self.measurement.city.components(separatedBy: ",")[0]
+                UIApplication.shared.isNetworkActivityIndicatorVisible = false
             }
         }
     }

@@ -11,6 +11,8 @@
 		72F2DECCC012C08AD3A3F8C5 /* Pods_AirQltTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1ED4D4C6AE4E3316E1FBA99E /* Pods_AirQltTests.framework */; };
 		BEA16A9DA7948F8424800E75 /* Pods_AirQlt.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1864CFAE6B03306968BF3BF0 /* Pods_AirQlt.framework */; };
 		E55C9DAB1E787A1200B23CDE /* StationsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E55C9DAA1E787A1200B23CDE /* StationsTableViewController.swift */; };
+		E55C9DAD1E7B121E00B23CDE /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E55C9DAC1E7B121E00B23CDE /* AboutViewController.swift */; };
+		E55C9DAF1E7B16D700B23CDE /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E55C9DAE1E7B16D700B23CDE /* SettingsViewController.swift */; };
 		E5C92D431E72EB9D000F4CF7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5C92D421E72EB9D000F4CF7 /* AppDelegate.swift */; };
 		E5C92D451E72EB9D000F4CF7 /* MeausermentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5C92D441E72EB9D000F4CF7 /* MeausermentViewController.swift */; };
 		E5C92D481E72EB9D000F4CF7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E5C92D461E72EB9D000F4CF7 /* Main.storyboard */; };
@@ -66,6 +68,8 @@
 		D549F41B8AFDC11562DAFC47 /* Pods-AirQltUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AirQltUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-AirQltUITests/Pods-AirQltUITests.release.xcconfig"; sourceTree = "<group>"; };
 		DA2627725CF77FFD7D0606EB /* Pods-AirQlt.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AirQlt.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AirQlt/Pods-AirQlt.debug.xcconfig"; sourceTree = "<group>"; };
 		E55C9DAA1E787A1200B23CDE /* StationsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StationsTableViewController.swift; sourceTree = "<group>"; };
+		E55C9DAC1E7B121E00B23CDE /* AboutViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
+		E55C9DAE1E7B16D700B23CDE /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		E5C92D3F1E72EB9D000F4CF7 /* AirQlt.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AirQlt.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E5C92D421E72EB9D000F4CF7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E5C92D441E72EB9D000F4CF7 /* MeausermentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeausermentViewController.swift; sourceTree = "<group>"; };
@@ -243,6 +247,8 @@
 				E5C92D8C1E72FA83000F4CF7 /* LeftMenuViewController.swift */,
 				E5C92D8A1E72F1FC000F4CF7 /* ResideMenuViewController.swift */,
 				E55C9DAA1E787A1200B23CDE /* StationsTableViewController.swift */,
+				E55C9DAC1E7B121E00B23CDE /* AboutViewController.swift */,
+				E55C9DAE1E7B16D700B23CDE /* SettingsViewController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -570,12 +576,14 @@
 			files = (
 				E5C92DA01E757619000F4CF7 /* AirQualityIndex.swift in Sources */,
 				E5C92D8F1E7330E5000F4CF7 /* MeasureCollectionViewCell.swift in Sources */,
+				E55C9DAF1E7B16D700B23CDE /* SettingsViewController.swift in Sources */,
 				E5C92D9E1E7548C8000F4CF7 /* AirMeasurement.swift in Sources */,
 				E5C92D8B1E72F1FC000F4CF7 /* ResideMenuViewController.swift in Sources */,
 				E5C92DA21E758DC3000F4CF7 /* Constants.swift in Sources */,
 				E5C92D451E72EB9D000F4CF7 /* MeausermentViewController.swift in Sources */,
 				E5C92D8D1E72FA83000F4CF7 /* LeftMenuViewController.swift in Sources */,
 				E5C92D431E72EB9D000F4CF7 /* AppDelegate.swift in Sources */,
+				E55C9DAD1E7B121E00B23CDE /* AboutViewController.swift in Sources */,
 				E55C9DAB1E787A1200B23CDE /* StationsTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

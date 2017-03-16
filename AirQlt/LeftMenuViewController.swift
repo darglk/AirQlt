@@ -29,8 +29,21 @@ class LeftMenuViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let rootViewController = UIApplication.shared.keyWindow?.rootViewController as? ResideMenuViewController
+        
         if indexPath.row == 0 {
-            //fetch rootviewcontroller and push to detailed view controller
+            let measurementViewController = storyboard?.instantiateViewController(withIdentifier: "contentViewController")
+            rootViewController?.contentViewController = measurementViewController
+            rootViewController?.hideViewController()
+            
+        } else if indexPath.row == 1 {
+            let aboutViewController = storyboard?.instantiateViewController(withIdentifier: "aboutNavigation")
+            rootViewController?.contentViewController = aboutViewController
+            rootViewController?.hideViewController()
+        } else if indexPath.row == 2 {
+            let settingsViewController = storyboard?.instantiateViewController(withIdentifier: "navigationSet")
+            rootViewController?.contentViewController = settingsViewController
+            rootViewController?.hideViewController()
         }
     }
 }

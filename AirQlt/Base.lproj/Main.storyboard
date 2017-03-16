@@ -146,6 +146,48 @@
             </objects>
             <point key="canvasLocation" x="1770" y="11.619718309859156"/>
         </scene>
+        <!--Informacje-->
+        <scene sceneID="lTc-eG-gg2">
+            <objects>
+                <viewController storyboardIdentifier="aboutViewController" id="mrx-ak-CGf" customClass="AboutViewController" customModule="AirQlt" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="v09-eL-v1a"/>
+                        <viewControllerLayoutGuide type="bottom" id="Aan-nR-wZy"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="GIg-rb-ONd">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Aplikacja pozwala zapoznać się z pomiarami powietrza w wybranych miastach Polski. Dane pochodzą ze strony api.waqi.info. " textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xqL-3p-OHv">
+                                <rect key="frame" x="12.5" y="72" width="295" height="97"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="295" id="6mU-C4-4i0"/>
+                                    <constraint firstAttribute="height" constant="97" id="PE7-qc-SRM"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.20392156859999999" green="0.28627450980000002" blue="0.36862745099999999" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="xqL-3p-OHv" firstAttribute="top" secondItem="v09-eL-v1a" secondAttribute="bottom" constant="8" id="QwL-71-O4X"/>
+                            <constraint firstItem="xqL-3p-OHv" firstAttribute="centerX" secondItem="GIg-rb-ONd" secondAttribute="centerX" id="a8a-g2-anw"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Informacje" id="fl1-RE-4eT">
+                        <barButtonItem key="leftBarButtonItem" image="Menu" id="IjG-3F-5en">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <connections>
+                                <action selector="showLeftMenu:" destination="mrx-ak-CGf" id="6o2-Oo-Q9n"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hTt-OK-Hsg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3000" y="1431.338028169014"/>
+        </scene>
         <!--AirQlt-->
         <scene sceneID="8t8-yd-Pdh">
             <objects>
@@ -530,6 +572,91 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fL4-Zq-Au9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1008.75" y="748.94366197183103"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="gO7-92-3Md">
+            <objects>
+                <navigationController storyboardIdentifier="aboutNavigation" automaticallyAdjustsScrollViewInsets="NO" id="KEQ-5R-253" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="mR6-s7-XgB">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="mrx-ak-CGf" kind="relationship" relationship="rootViewController" id="O2e-F0-CdL"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x5R-Rb-xaz" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2002.5" y="1431.338028169014"/>
+        </scene>
+        <!--Ustawienia-->
+        <scene sceneID="8DQ-cl-OVl">
+            <objects>
+                <tableViewController storyboardIdentifier="navigationSettings" id="rhg-Ln-rUY" customClass="SettingsViewController" customModule="AirQlt" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" sectionIndexMinimumDisplayRowCount="1" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" id="7Ya-7Y-MeB">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.20392156859999999" green="0.28627450980000002" blue="0.36862745099999999" alpha="1" colorSpace="calibratedRGB"/>
+                        <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        <sections>
+                            <tableViewSection id="J2C-Ou-luf">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="Cell" textLabel="miT-qr-YfD" style="IBUITableViewCellStyleDefault" id="Np9-fz-Uwz">
+                                        <rect key="frame" x="0.0" y="35" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Np9-fz-Uwz" id="FqQ-ou-Ddk">
+                                            <rect key="frame" x="0.0" y="0.0" width="287" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Uprawnienia aplikacji" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="miT-qr-YfD">
+                                                    <rect key="frame" x="15" y="0.0" width="270" height="43"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="17"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" red="0.20392156859999999" green="0.28627450980000002" blue="0.36862745099999999" alpha="1" colorSpace="calibratedRGB"/>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                        </sections>
+                        <connections>
+                            <outlet property="dataSource" destination="rhg-Ln-rUY" id="Dfy-oy-eYC"/>
+                            <outlet property="delegate" destination="rhg-Ln-rUY" id="7aX-jf-OTP"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Ustawienia" id="atU-Aq-sec">
+                        <barButtonItem key="leftBarButtonItem" image="Menu" id="SYU-zr-z4F">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <connections>
+                                <action selector="showLeftMenu:" destination="rhg-Ln-rUY" id="5Mv-zz-giB"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XPu-Mo-dtI" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3008" y="2098"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="U36-9L-zlU">
+            <objects>
+                <navigationController storyboardIdentifier="navigationSet" id="pvl-cl-LlH" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="cTc-0F-kZu">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="rhg-Ln-rUY" kind="relationship" relationship="rootViewController" id="dMl-t4-7rC"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="23z-IL-aww" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1995" y="2098"/>
         </scene>
     </scenes>
     <resources>
