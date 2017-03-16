@@ -9,6 +9,7 @@
 import UIKit
 import RESideMenu
 import Alamofire
+import UserNotifications
 
 class MesauermentViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
 
@@ -21,12 +22,31 @@ class MesauermentViewController: UIViewController, UICollectionViewDataSource, U
     
     @IBOutlet weak var measurementsCollectionView: UICollectionView!
     var measurement:AirMeasurement!
+    var notificationShown = false
     
     @IBAction func stationCellTapped(segue: UIStoryboardSegue) {
     }
     
     @IBAction func close(segue: UIStoryboardSegue) {
         
+    }
+    
+    func prepareNotification() {
+        if notificationShown {
+            return
+        }
+        
+        let content = UNMutableNotificationContent()
+        content.title = "Pomiary"
+        content.subtitle = whenMeasuredTime.text!
+        content.body = "Sprawdź jak zmenia się powietrze w " + title!
+        content.sound = UNNotificationSound.default()
+            
+        let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 60, repeats: false)
+        let request = UNNotificationRequest(identifier: "airqlt.measurements", content: content, trigger: trigger)
+            
+        UNUserNotificationCenter.current().add(request, withCompletionHandler: nil)
+        notificationShown = true
     }
     
     func fetchRecordsFromApi(city: String, completionHandler: ((String?) ->())?) {
@@ -48,6 +68,8 @@ class MesauermentViewController: UIViewController, UICollectionViewDataSource, U
                 self.setLabelsAtIndex(index: 0)
                 self.title = self.measurement.city.components(separatedBy: ",")[0]
                 UIApplication.shared.isNetworkActivityIndicatorVisible = false
+                UserDefaults.standard.setValue(city, forKey: "chosenCity")
+                self.prepareNotification()
             }
         }
     }
@@ -62,13 +84,15 @@ class MesauermentViewController: UIViewController, UICollectionViewDataSource, U
     override func viewDidLoad() {
         super.viewDidLoad()
         self.measurement = AirMeasurement()
-        fetchRecordsFromApi(city: "8689", completionHandler: nil)
+        var cityId = "8689"
+        if UserDefaults.standard.string(forKey: "chosenCity") != nil {
+            cityId = UserDefaults.standard.string(forKey: "chosenCity")!
+        }
+        fetchRecordsFromApi(city: cityId, completionHandler: nil)
         
         self.navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName:UIColor.white]
         measurementsCollectionView.delegate = self
         measurementsCollectionView.dataSource = self
-        
-        
     }
     
     override func didReceiveMemoryWarning() {

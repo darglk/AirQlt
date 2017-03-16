@@ -37,12 +37,12 @@ class LeftMenuViewController: UITableViewController {
             rootViewController?.hideViewController()
             
         } else if indexPath.row == 1 {
-            let aboutViewController = storyboard?.instantiateViewController(withIdentifier: "aboutNavigation")
-            rootViewController?.contentViewController = aboutViewController
-            rootViewController?.hideViewController()
-        } else if indexPath.row == 2 {
             let settingsViewController = storyboard?.instantiateViewController(withIdentifier: "navigationSet")
             rootViewController?.contentViewController = settingsViewController
+            rootViewController?.hideViewController()
+        } else if indexPath.row == 2 {
+            let aboutViewController = storyboard?.instantiateViewController(withIdentifier: "aboutNavigation")
+            rootViewController?.contentViewController = aboutViewController
             rootViewController?.hideViewController()
         }
     }
