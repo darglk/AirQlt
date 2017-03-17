@@ -3,3 +3,4 @@
 //
 
 #import "RESideMenu/RESideMenu.h"
+#import "MBCircularProgressBar/MBCircularProgressBarView.h"

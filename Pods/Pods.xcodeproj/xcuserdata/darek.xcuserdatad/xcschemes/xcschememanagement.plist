@@ -9,6 +9,16 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>MBCircularProgressBar-MBCircularProgressBar.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>MBCircularProgressBar.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-AirQlt.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -32,6 +42,11 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
+		<key>283F70D3AFEB0BA5F4C069189447700F</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>34E11BB08A1D8C57DCCC5282CD4CD57C</key>
 		<dict>
 			<key>primary</key>
@@ -42,12 +57,17 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>BB447EDD5816C6D747EFC7DD71F0A32C</key>
+		<key>C02293E44E4A593A6C6E8BE7284C39E2</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>C3321552611F1F10D0523ADFEE908D5F</key>
+		<key>CAC840DD7C14BED838F74AD37CD7CBBA</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>F579AA4D4755DD9570010BC36D0422F7</key>
 		<dict>
 			<key>primary</key>
 			<true/>

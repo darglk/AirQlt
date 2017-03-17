@@ -7,10 +7,11 @@
 //
 
 import UIKit
+import MBCircularProgressBar
 
 class MeasureCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var airPollutionPartName: UILabel!
-    @IBOutlet weak var airPollutionPartPercentageNumber: UILabel!
+    @IBOutlet weak var airPollutionPartPercentageNumber: MBCircularProgressBarView!
     @IBOutlet weak var airPollutionPartUnitNumber: UILabel!
     @IBOutlet weak var unitLabel: UILabel!
 }

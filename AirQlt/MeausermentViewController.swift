@@ -10,6 +10,7 @@ import UIKit
 import RESideMenu
 import Alamofire
 import UserNotifications
+import MBCircularProgressBar
 
 class MesauermentViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
 
@@ -18,8 +19,9 @@ class MesauermentViewController: UIViewController, UICollectionViewDataSource, U
     @IBOutlet weak var actualDensityNumber: UILabel!
     @IBOutlet weak var whenMeasured: UILabel!
     @IBOutlet weak var whenMeasuredTime: UILabel!
-    @IBOutlet weak var pollutionPercentage: UILabel!
+    //@IBOutlet weak var pollutionPercentage: UILabel!
     
+    @IBOutlet weak var progressBar: MBCircularProgressBarView!
     @IBOutlet weak var measurementsCollectionView: UICollectionView!
     var measurement:AirMeasurement!
     var notificationShown = false
@@ -78,7 +80,8 @@ class MesauermentViewController: UIViewController, UICollectionViewDataSource, U
         self.pollutionPartName.text = self.measurement.airQualityIndexes[index].airQualityIndexLongName
         self.actualDensityNumber.text = String(self.measurement.airQualityIndexes[index].airQualityIndexValue) + " μg/m\u{B3}"
         self.whenMeasuredTime.text = self.measurement.whenMeasured
-        self.pollutionPercentage.text = String((self.measurement.airQualityIndexes[index].airQualityIndexValue / NORM[self.measurement.airQualityIndexes[index].airQualityIndexName]!) * 100) + "%" // change this to be more brief
+        self.progressBar.value = CGFloat((self.measurement.airQualityIndexes[index].airQualityIndexValue / NORM[self.measurement.airQualityIndexes[index].airQualityIndexName]!) * 100)
+        
     }
     
     override func viewDidLoad() {
@@ -117,10 +120,10 @@ class MesauermentViewController: UIViewController, UICollectionViewDataSource, U
         
         cell.airPollutionPartName.text = airQualityIndex.airQualityIndexName
         cell.airPollutionPartUnitNumber.text = String(airQualityIndex.airQualityIndexValue)
-        cell.airPollutionPartPercentageNumber.text = String((airQualityIndex.airQualityIndexValue / NORM[airQualityIndex.airQualityIndexName]!) * 100) + "%" // change this to be more brief
+        cell.airPollutionPartPercentageNumber.value = CGFloat((airQualityIndex.airQualityIndexValue / NORM[airQualityIndex.airQualityIndexName]!) * 100)
         cell.unitLabel.text = "μg/m\u{B3}"
         cell.layer.borderWidth = 1.0;
-        cell.layer.borderColor = (indexPath.row == 0) ? UIColor.green.cgColor : UIColor.lightGray.cgColor;
+        cell.layer.borderColor = (indexPath.row == 0) ? UIColor.cyan.cgColor : UIColor.lightGray.cgColor;
         return cell
     }
     
@@ -132,7 +135,7 @@ class MesauermentViewController: UIViewController, UICollectionViewDataSource, U
         
         collectionView.cellForItem(at: IndexPath(item: 0, section: 0))?.layer.borderColor = UIColor.lightGray.cgColor
         let cell = collectionView.cellForItem(at: indexPath) as! MeasureCollectionViewCell
-        cell.layer.borderColor = UIColor.green.cgColor
+        cell.layer.borderColor = UIColor.cyan.cgColor
         setLabelsAtIndex(index: indexPath.row)
     }
     
