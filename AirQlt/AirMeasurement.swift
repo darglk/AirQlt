@@ -18,11 +18,28 @@ class AirMeasurement {
         
     }
     
-    init(withDictionary: NSDictionary) {
-        self.city = ((withDictionary.object(forKey: "data") as! NSDictionary).object(forKey: "city") as! NSDictionary).object(forKey: "name") as! String
-        self.whenMeasured = ((withDictionary.object(forKey: "data") as! NSDictionary).object(forKey: "time") as! NSDictionary).object(forKey: "s") as! String
+    func fetchMeasurements(city: String, completionHandlerSuccess: ((NSDictionary?) ->())?, completionHandlerFailure: ((Error?) -> ())?) {
+        UIApplication.shared.isNetworkActivityIndicatorVisible = true
+        Alamofire.request("https://api.waqi.info/feed/@\(city)/?token=\(API_KEY)").responseJSON { response in
+            if let json = response.result.value {
+                switch response.result {
+                case .success:
+                    let responseResult = json as! NSDictionary
+                    completionHandlerSuccess?(responseResult)
+                case .failure(let error):
+                    print(error)
+                    completionHandlerFailure?(error)
+                }
+            }
+        }
+    }
+    
+    func parseData(from dictionary: NSDictionary) {
+        print(dictionary)
+        self.city = ((dictionary.object(forKey: "data") as! NSDictionary).object(forKey: "city") as! NSDictionary).object(forKey: "name") as! String
+        self.whenMeasured = ((dictionary.object(forKey: "data") as! NSDictionary).object(forKey: "time") as! NSDictionary).object(forKey: "s") as! String
         
-        let partialMeasurements = (withDictionary.object(forKey: "data") as! NSDictionary).object(forKey: "iaqi") as! NSDictionary
+        let partialMeasurements = (dictionary.object(forKey: "data") as! NSDictionary).object(forKey: "iaqi") as! NSDictionary
         
         for index in partialMeasurements.allKeys {
             let partialMeasurement = partialMeasurements.object(forKey: index) as! NSDictionary
@@ -40,6 +57,4 @@ class AirMeasurement {
             self.airQualityIndexes.append(aiq)
         }
     }
-    
-    
 }

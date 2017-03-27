@@ -19,6 +19,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>OHHTTPStubs.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-AirQlt.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -42,12 +47,12 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>283F70D3AFEB0BA5F4C069189447700F</key>
+		<key>34E11BB08A1D8C57DCCC5282CD4CD57C</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>34E11BB08A1D8C57DCCC5282CD4CD57C</key>
+		<key>748F1C7F61D88F3FB355A8E829489671</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -57,12 +62,12 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>C02293E44E4A593A6C6E8BE7284C39E2</key>
+		<key>CAC840DD7C14BED838F74AD37CD7CBBA</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>CAC840DD7C14BED838F74AD37CD7CBBA</key>
+		<key>F0036D62A876761F12CA5312B62AFB23</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -73,6 +78,11 @@
 			<true/>
 		</dict>
 		<key>F590486C7741E239E650953D4BAA0900</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>F9105029D305F6F1871EC232AFF7503A</key>
 		<dict>
 			<key>primary</key>
 			<true/>

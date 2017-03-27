@@ -1,18 +1,36 @@
 PODS:
   - Alamofire (4.3.0)
   - MBCircularProgressBar (0.3.5)
+  - OHHTTPStubs (5.2.3):
+    - OHHTTPStubs/Default (= 5.2.3)
+  - OHHTTPStubs/Core (5.2.3)
+  - OHHTTPStubs/Default (5.2.3):
+    - OHHTTPStubs/Core
+    - OHHTTPStubs/JSON
+    - OHHTTPStubs/NSURLSession
+    - OHHTTPStubs/OHPathHelpers
+  - OHHTTPStubs/JSON (5.2.3):
+    - OHHTTPStubs/Core
+  - OHHTTPStubs/NSURLSession (5.2.3):
+    - OHHTTPStubs/Core
+  - OHHTTPStubs/OHPathHelpers (5.2.3)
+  - OHHTTPStubs/Swift (5.2.3):
+    - OHHTTPStubs/Core
   - RESideMenu (4.0.7)
 
 DEPENDENCIES:
   - Alamofire
   - MBCircularProgressBar
+  - OHHTTPStubs
+  - OHHTTPStubs/Swift
   - RESideMenu (~> 4.0.7)
 
 SPEC CHECKSUMS:
   Alamofire: 856a113053a7bc9cbe5d6367a555d773fc5cfef7
   MBCircularProgressBar: 0b795b722a5eb5b0923822f90474e2576a1a7855
+  OHHTTPStubs: e238cd5b66d8efa51c861db45895de8fe079f4a7
   RESideMenu: f24c508404b49c667344c54aba7e590883533958
 
-PODFILE CHECKSUM: ff10364e1e3ccd1034e166a9e3a89dd849bef259
+PODFILE CHECKSUM: a7792dce6e9ed2036c62397ee079fffca8eabab6
 
 COCOAPODS: 1.2.0

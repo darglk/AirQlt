@@ -25,12 +25,20 @@ class MesauermentViewController: UIViewController, UICollectionViewDataSource, U
     @IBOutlet weak var measurementsCollectionView: UICollectionView!
     var measurement:AirMeasurement!
     var notificationShown = false
-    
+    var cityId = "8689"
     @IBAction func stationCellTapped(segue: UIStoryboardSegue) {
     }
     
     @IBAction func close(segue: UIStoryboardSegue) {
         
+    }
+    
+    func stubsOn() {
+        OHHTTPStubs.stubRequests(passingTest: { request in
+            return true
+        }, withStubResponse: { response in
+            return OHHTTPStubsResponse()
+        })
     }
     
     func prepareNotification() {
@@ -51,47 +59,41 @@ class MesauermentViewController: UIViewController, UICollectionViewDataSource, U
         notificationShown = true
     }
     
-    func fetchRecordsFromApi(city: String, completionHandler: ((String?) ->())?) {
-        UIApplication.shared.isNetworkActivityIndicatorVisible = true
-        Alamofire.request("https://api.waqi.info/feed/@\(city)/?token=\(API_KEY)").responseJSON { response in
-            if let json = response.result.value {
-                switch response.result {
-                case .success:
-                    let responseResult = json as! NSDictionary
-                    self.measurement = AirMeasurement(withDictionary: responseResult)
-                    completionHandler?("")
-                case .failure(let error):
-                    print(error)
-                    completionHandler?("")
-                }
-            }
+    func setLabelsAtIndex(index: Int) {
+        if(self.measurement != nil && self.measurement.airQualityIndexes.count > 0) {
+            self.pollutionPartName.text = self.measurement.airQualityIndexes[index].airQualityIndexLongName
+            self.actualDensityNumber.text = String(self.measurement.airQualityIndexes[index].airQualityIndexValue) + " μg/m\u{B3}"
+            self.whenMeasuredTime.text = self.measurement.whenMeasured
+            self.progressBar.value = CGFloat((self.measurement.airQualityIndexes[index].airQualityIndexValue / NORM[self.measurement.airQualityIndexes[index].airQualityIndexName]!) * 100)
+        }
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        
+        measurement.fetchMeasurements(city: cityId, completionHandlerSuccess: { dictionary in
+            self.measurement.airQualityIndexes.removeAll()
+            self.measurement.parseData(from: dictionary!)
             DispatchQueue.main.async {
                 self.measurementsCollectionView.reloadData()
                 self.setLabelsAtIndex(index: 0)
                 self.title = self.measurement.city.components(separatedBy: ",")[0]
                 UIApplication.shared.isNetworkActivityIndicatorVisible = false
-                UserDefaults.standard.setValue(city, forKey: "chosenCity")
+                UserDefaults.standard.setValue(self.cityId, forKey: "chosenCity")
                 self.prepareNotification()
             }
-        }
-    }
-    
-    func setLabelsAtIndex(index: Int) {
-        self.pollutionPartName.text = self.measurement.airQualityIndexes[index].airQualityIndexLongName
-        self.actualDensityNumber.text = String(self.measurement.airQualityIndexes[index].airQualityIndexValue) + " μg/m\u{B3}"
-        self.whenMeasuredTime.text = self.measurement.whenMeasured
-        self.progressBar.value = CGFloat((self.measurement.airQualityIndexes[index].airQualityIndexValue / NORM[self.measurement.airQualityIndexes[index].airQualityIndexName]!) * 100)
-        
+        }, completionHandlerFailure: { error in
+            print(error)
+        })
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        print("elo")
         self.measurement = AirMeasurement()
-        var cityId = "8689"
+        cityId = "8689"
         if UserDefaults.standard.string(forKey: "chosenCity") != nil {
             cityId = UserDefaults.standard.string(forKey: "chosenCity")!
         }
-        fetchRecordsFromApi(city: cityId, completionHandler: nil)
         
         self.navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName:UIColor.white]
         measurementsCollectionView.delegate = self

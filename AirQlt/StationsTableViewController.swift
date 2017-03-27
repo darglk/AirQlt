@@ -50,7 +50,7 @@ class StationsTableViewController: UITableViewController {
         if segue.identifier == "selectedStation" {
             let destinationVc = segue.destination as! MesauermentViewController
             chosenStation = self.tableView.indexPathForSelectedRow
-            destinationVc.fetchRecordsFromApi(city: STATIONS[chosenStation.row][0], completionHandler: nil)
+            destinationVc.cityId = STATIONS[chosenStation.row][0]
         }
         
     }

@@ -10,6 +10,8 @@ target 'AirQlt' do
     pod 'RESideMenu', '~> 4.0.7'
     pod 'Alamofire'
     pod 'MBCircularProgressBar'
+    pod 'OHHTTPStubs' # Default subspecs, including support for NSURLSession & JSON etc
+    pod 'OHHTTPStubs/Swift' # Adds the Swiftier API wrapper too
   target 'AirQltTests' do
     inherit! :search_paths
     # Pods for testing
