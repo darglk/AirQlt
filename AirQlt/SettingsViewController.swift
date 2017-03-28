@@ -26,6 +26,7 @@ class SettingsViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
         if indexPath.row == 0 {
             UIApplication.shared.open(NSURL(string: UIApplicationOpenSettingsURLString)! as URL , options: [:], completionHandler: nil)
         }

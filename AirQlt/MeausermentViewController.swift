@@ -19,26 +19,18 @@ class MesauermentViewController: UIViewController, UICollectionViewDataSource, U
     @IBOutlet weak var actualDensityNumber: UILabel!
     @IBOutlet weak var whenMeasured: UILabel!
     @IBOutlet weak var whenMeasuredTime: UILabel!
-    //@IBOutlet weak var pollutionPercentage: UILabel!
-    
     @IBOutlet weak var progressBar: MBCircularProgressBarView!
     @IBOutlet weak var measurementsCollectionView: UICollectionView!
+    
     var measurement:AirMeasurement!
     var notificationShown = false
     var cityId = "8689"
+    
     @IBAction func stationCellTapped(segue: UIStoryboardSegue) {
     }
     
     @IBAction func close(segue: UIStoryboardSegue) {
         
-    }
-    
-    func stubsOn() {
-        OHHTTPStubs.stubRequests(passingTest: { request in
-            return true
-        }, withStubResponse: { response in
-            return OHHTTPStubsResponse()
-        })
     }
     
     func prepareNotification() {
@@ -82,13 +74,16 @@ class MesauermentViewController: UIViewController, UICollectionViewDataSource, U
                 self.prepareNotification()
             }
         }, completionHandlerFailure: { error in
-            print(error)
+            DispatchQueue.main.async {
+                let alertMessage = UIAlertController(title: "Błąd", message: "Wystąpił błąd podczas ładowania danych. Spróbuj ponownie później.", preferredStyle: .alert)
+                alertMessage.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+                self.present(alertMessage, animated: true, completion: nil)
+            }
         })
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        print("elo")
         self.measurement = AirMeasurement()
         cityId = "8689"
         if UserDefaults.standard.string(forKey: "chosenCity") != nil {
@@ -114,7 +109,7 @@ class MesauermentViewController: UIViewController, UICollectionViewDataSource, U
     @IBAction func showCities(_ sender: UIBarButtonItem) {
     }
     
-    //UICollectionViewDataSourceMethods implementation
+    // MARK: UICollectionViewDataSourceMethods implementation
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "Cell", for: indexPath) as! MeasureCollectionViewCell

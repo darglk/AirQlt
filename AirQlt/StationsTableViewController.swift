@@ -36,14 +36,8 @@ class StationsTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
-
         cell.textLabel?.text = STATIONS[indexPath.row][1]
-        
         return cell
-    }
-    
-    func printSth() -> String{
-        return STATIONS[chosenStation.row][0]
     }
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -52,6 +46,5 @@ class StationsTableViewController: UITableViewController {
             chosenStation = self.tableView.indexPathForSelectedRow
             destinationVc.cityId = STATIONS[chosenStation.row][0]
         }
-        
     }
 }

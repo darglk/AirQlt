@@ -9,15 +9,35 @@
 import Foundation
 import Alamofire
 
+/// Air measurements class model
 class AirMeasurement {
-    var airQualityIndexes:[AirQualityIndex] = []
-    var city:String = ""
-    var whenMeasured:String=""
     
+    /// Air Quality Indexes fetched from the API
+    var airQualityIndexes:[AirQualityIndex] = []
+    /// City name from which measurements are loaded
+    var city:String = ""
+    /// Time of measurement in particular city
+    var whenMeasured:String = ""
+    
+    /**
+     Initializes a new Measurement before loading request to API
+     
+     - Parameters:
+     
+     - Returns: An empty instance
+     */
     init() {
         
     }
     
+    /** 
+     Sends request to API server
+     
+     - Parameters:
+        - city: ID of the city
+        - completionHandlerSuccess: an optional block which is used to manipulate downloaded data.
+        - completionHandlerFailure: an optinal block which is used to handle request error.
+     */
     func fetchMeasurements(city: String, completionHandlerSuccess: ((NSDictionary?) ->())?, completionHandlerFailure: ((Error?) -> ())?) {
         UIApplication.shared.isNetworkActivityIndicatorVisible = true
         Alamofire.request("https://api.waqi.info/feed/@\(city)/?token=\(API_KEY)").responseJSON { response in
@@ -27,13 +47,18 @@ class AirMeasurement {
                     let responseResult = json as! NSDictionary
                     completionHandlerSuccess?(responseResult)
                 case .failure(let error):
-                    print(error)
                     completionHandlerFailure?(error)
                 }
             }
         }
     }
     
+    /**
+     Parses downloaded data from API
+     
+     - Parameters:
+        - dictionary: dictionary with raw measurement data.
+     */
     func parseData(from dictionary: NSDictionary) {
         print(dictionary)
         self.city = ((dictionary.object(forKey: "data") as! NSDictionary).object(forKey: "city") as! NSDictionary).object(forKey: "name") as! String
